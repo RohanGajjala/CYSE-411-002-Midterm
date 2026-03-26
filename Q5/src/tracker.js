@@ -55,9 +55,14 @@ function saveDashboardState() {
 
 
 async function fetchIncidents() {
-    const res  = fetch("/api/incidents");      // Missing await
-    const data = res.json();                   // Missing await; res is a Promise
+    try { 
+    const res  = await fetch("/api/incidents");      // Missing await
+    const data = await res.json();                   // Missing await; res is a Promise
     return data;
+
+    } catch {
+        return "[]"
+    }
 }
 
 
