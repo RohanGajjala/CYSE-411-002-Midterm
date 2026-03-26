@@ -77,6 +77,8 @@ async function fetchIncidents() {
 
 
 function renderIncidents(incidents) {
+    
+    try {
     const container = document.getElementById("incident-list");
     container.innerHTML = "";                  // Clear previous results
 
@@ -86,7 +88,12 @@ function renderIncidents(incidents) {
         let TC = item.getByElementId("span").textContent();
         
         container.appendChild(TC);
-    });
+
+   
+    }
+
+                       } catch console.error() {
+            return "Error" }
 }
 
 
