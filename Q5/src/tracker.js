@@ -36,10 +36,17 @@ function loadDashboardState() {
 
 
 function saveDashboardState() {
+    try {
+    
     const filterInput = document.getElementById("filter-select");
     const filter      = filterInput.value;    // Not validated before storing
     localStorage.setItem("dashboardState", JSON.stringify({ filter: filter }));
     currentFilter = filter;
+
+    } catch parse.error() {
+        return "syntax wrong"
+
+    }
 }
 
 
