@@ -47,7 +47,7 @@ function sanitizeSearchQuery(input) {
     //   - Trim leading/trailing whitespace before processing
     //   - Max 40 characters
     //   - Return null if the result is empty after sanitization
-    let sanitize = input.replace(/['A-Za-z0-9_-']/g, "");
+    let sanitize = input.replace(/['A-Za-z0-9_-']/g, ""); 
     if (sanitize == "") {
         return null
     } else {
