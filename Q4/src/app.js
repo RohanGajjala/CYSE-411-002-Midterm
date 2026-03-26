@@ -7,12 +7,11 @@ function loadSession() {
     try {
     
     const raw = sessionStorage.getItem("session");
-    const session = JSON.parse(raw);          // No try/catch
+    const session = JSON.parse(raw);  // No try/catch
+         }    catch {
+        return "Error";
+    }
     return session; // No field validation
-
-    }    catch {
-
-    
 }
 
 
