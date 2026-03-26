@@ -4,9 +4,15 @@
 
 
 function loadSession() {
+    try {
+    
     const raw = sessionStorage.getItem("session");
     const session = JSON.parse(raw);          // No try/catch
-    return session;                            // No field validation
+    return session; // No field validation
+
+    }    catch {
+
+    
 }
 
 
