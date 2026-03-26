@@ -83,11 +83,9 @@ function renderIncidents(incidents) {
     incidents.forEach(function (incident) {
         const item = document.createElement("li");
         // UNSAFE – directly inserts API response as HTML
-        item.innerHTML =
-            "<strong>" + incident.title + "</strong>" +
-            " <span class='severity severity-" + incident.severity + "'>" +
-            incident.severity + "</span>";
-        container.appendChild(item);
+        let TC = item.getByElementId("span").textContent();
+        
+        container.appendChild(TC);
     });
 }
 
