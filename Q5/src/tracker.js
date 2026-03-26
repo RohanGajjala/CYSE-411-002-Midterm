@@ -60,7 +60,7 @@ async function fetchIncidents() {
     const data = await res.json();                   // Missing await; res is a Promise
     return data;
 
-    } catch {
+    } catch console.error() {
         return "[]"
     }
 }
